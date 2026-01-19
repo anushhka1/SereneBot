@@ -52,14 +52,12 @@ Keep your responses concise, clear, and emotionally understanding, while maintai
 
       const combinedPrompt = `${systemPrompt}\n\nUser: ${prompt}\nSereneBot:`;
 
-      const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
-
       const response = await axios.post(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${API_KEY}`,
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=AIzaSyAmQXnUx0MQagAlsuH1rxGBHQvQRdjP_l8",
         {
           contents: [{ parts: [{ text: combinedPrompt }] }],
         },
-        { headers: { "Content-Type": "application/json" } },
+        { headers: { "Content-Type": "application/json" } }
       );
 
       const answerText = response.data.candidates[0].content.parts[0].text;
@@ -74,15 +72,15 @@ Keep your responses concise, clear, and emotionally understanding, while maintai
       // Update latestMessage for Sidebar
       setChats((prev) =>
         prev.map((chat) =>
-          chat._id === selectedChat ? { ...chat, latestMessage: prompt } : chat,
-        ),
+          chat._id === selectedChat ? { ...chat, latestMessage: prompt } : chat
+        )
       );
 
       // Save chat message to backend
       await axios.post(
         `${server}/api/chat/${selectedChat}`,
         { question: prompt, answer: answerText },
-        { headers: { Authorization: `Bearer ${token}` } },
+        { headers: { Authorization: `Bearer ${token}` } }
       );
     } catch (err) {
       console.log(err);
@@ -104,7 +102,7 @@ Keep your responses concise, clear, and emotionally understanding, while maintai
 
       // Load stored messages for latestMessage
       const storedMessages = JSON.parse(
-        localStorage.getItem("chatMessages") || "{}",
+        localStorage.getItem("chatMessages") || "{}"
       );
 
       const updatedChats = data.map((chat) => ({
@@ -114,8 +112,8 @@ Keep your responses concise, clear, and emotionally understanding, while maintai
             ? storedMessages[chat._id][storedMessages[chat._id].length - 1]
                 .question
             : chat.messages && chat.messages.length > 0
-              ? chat.messages[chat.messages.length - 1].question
-              : "",
+            ? chat.messages[chat.messages.length - 1].question
+            : "",
       }));
 
       setChats(updatedChats);
@@ -146,7 +144,7 @@ Keep your responses concise, clear, and emotionally understanding, while maintai
       const { data: newChat } = await axios.post(
         `${server}/api/chat/new`,
         {},
-        { headers: { Authorization: `Bearer ${token}` } },
+        { headers: { Authorization: `Bearer ${token}` } }
       );
 
       setChats((prev) => [{ ...newChat, latestMessage: "" }, ...prev]);
