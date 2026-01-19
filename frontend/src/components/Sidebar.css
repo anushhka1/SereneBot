@@ -1,0 +1,139 @@
+/* Base Sidebar Style */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 270px;
+  background: linear-gradient(160deg, #9c27b0, #8bc34a);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  color: white;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 0 25px 25px 0;
+}
+
+/* Open state */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .sidebar {
+    position: relative;
+    transform: translateX(0);
+    border-radius: 0;
+    width: 260px;
+  }
+}
+
+/* Logo */
+.sidebar img.sideImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.sidebar .btn {
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Light button hover */
+.sidebar .btn.bg-light:hover {
+  background: linear-gradient(90deg, #9c27b0, #8bc34a);
+  color: white;
+  box-shadow: 0 0 10px rgba(156, 39, 176, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Danger button hover */
+.sidebar .btn.btn-danger:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+}
+
+/* Recent chats scrollable */
+.sidebar > div:nth-of-type(3) {
+  flex: 1;            /* Scrollable section grows */
+  overflow-y: auto;   /* Vertical scroll if chats overflow */
+  margin-bottom: 1rem;
+}
+
+/* Chat item */
+.sidebar .chat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.9rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar .chat-item:hover {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(156, 39, 176, 0.25);
+  transform: scale(1.02);
+}
+
+.sidebar .chat-item span {
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Scrollbar */
+.sidebar > div:nth-of-type(3)::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar > div:nth-of-type(3)::-webkit-scrollbar-thumb {
+  background: #8bc34a;
+  border-radius: 10px;
+}
+
+/* Close button (mobile) */
+.btn-light.d-md-none {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #9c27b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-light.d-md-none:hover {
+  background-color: #9c27b0;
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+/* Logout button */
+.sidebar .logout-btn {
+  position: sticky;       /* Always visible at bottom */
+  bottom: 0;
+  background: linear-gradient(90deg, #9c27b0, #8bc34a);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.sidebar .logout-btn:hover {
+  box-shadow: 0 0 10px rgba(156, 39, 176, 0.3);
+  transform: translateY(-2px);
+}

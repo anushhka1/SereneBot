@@ -1,0 +1,358 @@
+body {
+  background-color: hsl(287, 44%, 80%);
+  font-family: "Marcellus", serif;
+  font-style: normal;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4b0082;
+}
+
+.hover-link {
+  position: relative;
+}
+.hover-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #8bc34a;
+  transition: width 0.3s ease;
+}
+.hover-link:hover::after {
+  width: 100%;
+}
+
+/*Navbar icon*/
+.navbar-brand img, .sideImg{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* Get started button */
+.btn-success {
+  background: linear-gradient(90deg, #9c27b0, #8bc34a);
+  border: none;
+  transition: all 0.4s ease;
+  height: 50px;
+  padding-top: 10px;
+  width: 180px;
+}
+
+.btn-success:hover {
+  background: linear-gradient(90deg, #9c27b0, #8bc34a);
+  box-shadow: 0 0 12px rgba(139,195,74,0.5), 0 0 12px rgba(156,39,176,0.4);
+  transform: translateY(-2px);
+}
+
+.hero-title span {
+  background: linear-gradient(90deg, #9c27b0, #8bc34a);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-section {
+  background: linear-gradient(90deg, rgba(202, 43, 231, 0.15),rgba(167, 251, 71, 0.15));
+  position: relative;
+  overflow: hidden;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.3), transparent 60%);
+}
+
+
+/* Animation for robot */
+@keyframes floatingRobot {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.heroRobo {
+  max-width: 100%;
+  height: auto;
+  animation: floatingRobot 2s ease-in-out infinite;
+}
+
+
+/*  Logo Surprise Entrance */
+.navbar-brand img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateX(-50px) scale(0.8);
+  animation: logoEntry 1s ease-out forwards;
+}
+
+/*  Keyframes for smooth side entrance */
+@keyframes logoEntry {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/*  Hover effect */
+.navbar-brand img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Resources section stylings */
+.page-heading {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.resources-page {
+  background: linear-gradient(90deg, #f7e9ff, #e8f7dd);
+  padding: 3rem 1rem;
+  min-height: 100vh;
+}
+.resources-subtitle {
+  color: #555;
+  font-size: 1.1rem;
+  text-align: center;       
+  max-width: 600px;         
+  margin: 0 auto 2rem auto; 
+  opacity: 0;
+  font-weight: 500;
+  transform: translateY(10px);
+  animation: fadeSlideIn 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------- TITLES ---------- */
+
+.section-title {
+  color: #444;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* ---------- CRISIS BOX ---------- */
+.crisis-box {
+  background: linear-gradient(135deg, #ffe5e5, #fff5f5);
+  border-left: 6px solid #ff6b6b;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.crisis-box p {
+  color: #c0392b !important;
+}
+
+/* Crisis Cards */
+.crisis-card {
+  background: #ffffffee;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.crisis-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* ---------- RESOURCE CARDS ---------- */
+.resource-section {
+  background: linear-gradient(135deg, #e3f2ff, #f1f8ff);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.resource-card {
+  background: #ffffffee;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* ---------- BADGES ---------- */
+.badge.bg-info {
+  background: #a8d8ff !important;      
+  color: #004e89 !important;
+}
+
+.search-container {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.search-input {
+  padding-left: 2.2rem; 
+  border-radius: 25px;
+}
+
+/* ---------- PROFESSIONAL HELP ---------- */
+.prof-help-section {
+  background: linear-gradient(135deg, #ffeedd, #fff7f0);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 3px solid #ffb78a;        
+  box-shadow: 0 6px 18px rgba(255, 150, 100, 0.15);
+}
+
+.prof-help-section .resource-card {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.prof-help-section .resource-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(255, 150, 100, 0.25);
+  background: #fff7f0;
+  border: 2px solid #ffb78a;
+}
+
+/* ---------- SELF CARE LIST ---------- */
+.selfcare-item input:checked + span {
+  text-decoration: line-through;
+  color: #2e7d32;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.selfcare-list li {
+  background: #ffffffaa;
+  padding: 0.6rem;
+  margin-bottom: 0.4rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  font-size: 1rem;
+  color: #444;
+}
+
+.selfcare-box {
+  background: #cdeaa8dd; 
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.selfcare-item {
+  padding: 0.5rem 0.6rem;
+  margin-bottom: 0.4rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  background: #f0f4f8; 
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.selfcare-item:hover {
+  background: #d4e7ff; 
+}
+
+.selfcare-item input {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.6rem;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn-danger {
+  background: #ff7a7a !important;
+  border: none;
+}
+
+.btn-warning {
+  background: #ffdd8b !important;
+  border: none;
+  color: #6b4f00 !important;
+}
+
+.btn-primary {
+  background: #7dafff !important;
+  border: none;
+}
+
+/* ---------- Fade Animation ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.resource-card,
+.crisis-card {
+  padding: 1.4rem !important;     
+}
+
+.row.g-4 > div {
+  margin-bottom: 1.2rem;          
+}
+
+/* Cards spacing inside */
+.resource-card h5,
+.crisis-card h5 {
+  margin-bottom: 0.5rem;
+}
+
+.resource-card p,
+.crisis-card p {
+  margin-bottom: 0.2rem;
+}
+
+.resource-card, .crisis-card {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
