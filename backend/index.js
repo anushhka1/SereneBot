@@ -5,7 +5,7 @@ import cors from "cors"
 // Importing routes 
 import userRoutes from "./routes/userRoutes.js"
 import chatRoutes from "./routes/chatRoutes.js"
-import journalRoutes from "./routes/journalRoutes.js"; // ✅
+import journalRoutes from "./routes/journalRoutes.js";
 
 dotenv.config()
 const app = express()

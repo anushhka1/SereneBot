@@ -24,9 +24,6 @@ export const loginUser = async (req, res) => {
 
 
 // Fetch Profile
-
-
-// Fetch Profile
 export const myprofile = async (req, res) => {
   try {
     // req.user comes from isAuth middleware
