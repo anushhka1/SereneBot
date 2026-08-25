@@ -1,12 +1,12 @@
 # SereneBot
-🌿 SereneBot – Mental Health Chatbot
-
+**🌿 SereneBot – Mental Health Chatbot
+**
 SereneBot is an AI-powered mental health support chatbot developed using the MERN Stack and Gemini AI. The project is designed to provide users with a supportive and non-judgmental environment where they can express their thoughts, have conversations with an AI chatbot, and maintain a personal journal.
 
 The application focuses on making basic emotional support more accessible while providing a simple and user-friendly experience.
 
-✨ Features
-🤖 AI Chatbot – Interact with SereneBot through Gemini AI.
+**✨ Features
+**🤖 AI Chatbot – Interact with SereneBot through Gemini AI.
 💬 Supportive Conversations – Provides empathetic responses based on the user's conversation.
 📔 Personal Journal – Users can write and save their thoughts, feelings, and daily reflections.
 🔐 Authentication – User login and verification functionality.
