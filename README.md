@@ -1,109 +1,85 @@
-# SereneBot
-**🌿 SereneBot – Mental Health Chatbot
-**
-SereneBot is an AI-powered mental health support chatbot developed using the MERN Stack and Gemini AI. The project is designed to provide users with a supportive and non-judgmental environment where they can express their thoughts, have conversations with an AI chatbot, and maintain a personal journal.
+SereneBot – Mental Health Chatbot 🤖💙
 
-The application focuses on making basic emotional support more accessible while providing a simple and user-friendly experience.
+SereneBot is an AI-powered mental health chatbot developed using the MERN Stack and Gemini AI. It provides users with an accessible and supportive platform to express their thoughts, interact with an AI chatbot, and maintain a personal journal.
 
-**✨ Features
-**🤖 AI Chatbot – Interact with SereneBot through Gemini AI.
-💬 Supportive Conversations – Provides empathetic responses based on the user's conversation.
-📔 Personal Journal – Users can write and save their thoughts, feelings, and daily reflections.
-🔐 Authentication – User login and verification functionality.
-🏠 Dashboard – Centralized interface to access different features.
-🧭 Resource Guidance – Provides useful mental health resources when appropriate.
-🔒 Privacy-Focused – Designed to keep user information and conversations protected.
-📱 User-Friendly Interface – Simple and responsive interface for easy navigation.
-🛠️ Technologies Used
+Note: SereneBot is designed as a supportive tool and does not replace professional mental health care or emergency services.
+
+🌿 Features
+🔐 User Authentication – Secure login and verification.
+💬 AI Chatbot – Interactive conversations powered by Gemini AI.
+📖 Personal Journal – Write and save personal thoughts and reflections.
+🏠 Dashboard – Easy navigation between chatbot and journal features.
+🔒 Privacy-focused – Designed to provide a private and comfortable environment.
+🧠 Supportive Responses – Provides empathetic responses for everyday emotional support.
+📚 Resource Guidance – Can guide users toward appropriate mental health resources when required.
+🛠️ Tech Stack
 Frontend
 React.js
-JavaScript
 Bootstrap
-HTML5
-CSS3
+JavaScript
 Backend
 Node.js
 Express.js
 REST APIs
 Database
 MongoDB
-AI Integration
+AI
 Gemini AI API
 Tools
-Git & GitHub
 Visual Studio Code
+Git & GitHub
 npm
-📂 Project Modules
-🔐 Authentication
-
-Allows users to securely access the application through login and verification.
-
-🏠 Dashboard
-
-Provides users with access to the chatbot, journal, and other available features.
-
-🤖 Chatbot
-
-The main module of SereneBot where users can interact with the AI-powered assistant and receive supportive responses.
-
-📔 Personal Journal
-
-Allows users to record their thoughts, feelings, and daily experiences for personal reflection.
-
-🧭 Resource Guidance
-
-Helps direct users toward relevant mental health resources when additional support may be needed.
-
-🚀 Installation & Setup
-
-Clone the repository:
-
+📂 Main Modules
+Login & Verification
+User authentication and verification.
+Home/Dashboard
+Central navigation for the application.
+Chatbot
+AI-powered conversation using Gemini AI.
+Personal Journal
+Store and manage personal reflections.
+🚀 Getting Started
+Clone the Repository
 git clone https://github.com/anushhka1/SereneBot.git
 cd SereneBot
-
-Install the backend dependencies:
-
+Backend Setup
 cd backend
-npm install
-
-Create a .env file inside the backend directory and configure the required environment variables such as the MongoDB connection string and Gemini API key.
-
-Start the backend:
-
-npm start
-
-Install and start the frontend:
-
-cd ../frontend
-npm install
+npm ci
 npm run dev
-🔐 Environment Variables
 
-The project requires environment variables for sensitive information such as:
+Create a .env file in the backend folder:
 
-MongoDB connection details
-Gemini AI API key
-Authentication secrets
+PORT=3001
+Db_url=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+GEMINI_API_KEY=your_gemini_api_key
+Frontend Setup
+cd frontend
+npm ci
+npm run dev
 
-.env files should never be uploaded to GitHub.
+The frontend will generally be available at:
 
-🎯 Project Objective
+http://localhost:5173
 
-The main objective of SereneBot is to develop an accessible AI-based platform that can:
+and the backend at:
 
-Provide immediate supportive conversations.
-Give users a space to express their thoughts.
-Encourage self-reflection through journaling.
-Provide basic mental health resource guidance.
-Demonstrate the integration of AI with a full-stack MERN application.
-⚠️ Disclaimer
+http://localhost:3001
+📌 Project Scope
 
-SereneBot is developed as an academic/project application for supportive conversations. It is not a replacement for a qualified mental health professional, diagnosis, or medical treatment. Users requiring professional or emergency assistance should contact appropriate qualified services.
+SereneBot aims to make basic emotional support more accessible by allowing users to interact with an AI chatbot from anywhere with an internet connection. The platform also provides a personal journal for self-reflection and encourages users to seek professional help when appropriate.
 
-👩‍💻 Developer
+⚠️ Limitations
+AI responses may not always be accurate or appropriate.
+The chatbot cannot replace a qualified mental health professional.
+The application requires an internet connection for AI and cloud services.
+Professional support may still be required for serious or ongoing mental health concerns.
+👩‍💻 Author
 
 Anushka Mishra
-Master of Computer Applications (MCA)
-2024–2026
+MCA (2024–26)
+Raj Kumar Goel Institute of Technology, Ghaziabad
 
-⭐ SereneBot — A calm space to talk, reflect, and feel heard.
+📄 Project
+
+SereneBot – Mental Health Chatbot using MERN Stack
